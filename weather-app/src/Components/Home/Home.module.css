@@ -1,0 +1,292 @@
+.container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(58, 56, 158, 0.84), #0e0c8b);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    width: 28%;
+    height: 20%;
+    font-size: 48px;
+    font-family: cursive;
+    color: #1f1f1f;
+    border-radius: 2rem;
+    background-image: url('../../../public/nube.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.selec_pais,
+.selec_prov {
+    padding: 0.2rem;
+    font-size: 20px;
+    font-family: cursive;
+    color: #0e0000;
+}
+
+.text {
+    width: 92%;
+    height: 12%;
+    font-size: 21px;
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #0e0000;
+    background-color: #0414fa4f;
+    border-radius: 0.5rem;
+    margin-left: 0.6rem;
+}
+
+.text1 {
+    width: 99.3%;
+    height: 10%;
+    font-size: 18px;
+    font-family:'Courier New', Courier, monospace;
+    color: #0e0000;
+    background-color: #f8e8e85e;
+    border: 0.1px solid rgba(0, 0, 0, 0.555) ;
+}
+
+.data {
+    font-size: 18px;
+    font-family:'Courier New', Courier, monospace;
+    color: #0e0000;   
+    display:flex; 
+    margin-left: 0.6rem;
+}
+
+.container2 {
+    width: 25vw;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+}
+
+.content {
+    margin-top: 1rem;
+}
+
+.content2 {
+    margin-top: 2rem;
+}
+
+.select {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background: #7edcec70;
+    transition: 0.3s;
+    width: 40%;
+}
+
+.select:focus {
+    outline-color: #003cac;
+    background: #7edbec4f;
+    transition: 0.3s;
+}
+
+.imgcontainer {
+    position: absolute;
+    top: 12rem;
+    right: 0.2rem;
+    transform: translate(-50%, -50%);
+    height: 8vh;
+    width: 4vw;
+    display: flexbox;
+}
+
+.imgcontainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92%;
+    height: 92%;
+    background-color: rgba(200, 214, 5, 0.164);
+    border-radius: 2rem;
+    box-shadow: inset 0 0 10px rgba(251, 255, 0, 0.219);
+    animation: expand-color 6s linear infinite;
+    z-index: -1;
+}
+
+@keyframes expand-color {
+    0% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+.data_weather {
+    border: 1px solid black;
+    background-color: #216ee28f;
+    height: 52vh;
+    transform-style: preserve-3d;
+    animation: rot 2s infinite ease;
+    border-radius: 18px;
+    box-shadow: 0 0 50px 0px, inset 0 0 90px 0px;
+    transition: 1s;
+    backdrop-filter: blur(50px);
+}
+
+.data_weather:hover {
+    box-shadow: 0 0 50px 0px ,inset 5px 5px 20px 0px black;
+}
+
+.loader {
+    position: relative;
+    margin-top: 4rem;
+    width: 110px;
+    height: 30px;
+    background: #86878a;
+    border-radius: 100px;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: #216ee2;
+    border-radius: 50%;
+    box-shadow: 40px 0 0 20px #3549ff;
+}
+
+.snow {
+    position: relative;
+    margin-top: 4rem;
+    display: flex;
+    z-index: 1;
+}
+
+.snow span {
+    position: relative;
+    width: 3px;
+    height: 3px;
+    background: #216ee2;
+    margin: 0 2px;
+    border-radius: 50%;
+    animation: snowing 5s linear infinite;
+    animation-duration: calc(15s / var(--i));
+    transform-origin: bottom;
+}
+
+@keyframes snowing {
+    0% {
+        transform: translateY(0px);
+    }
+    70% {
+        transform: translateY(100px) scale(1);
+    }
+    100% {
+        transform: translateY(100px) scale(0);
+    }
+}
+
+/* Estilos responsivos */
+
+@media screen and (max-width: 768px) {
+    .title {
+        width: 60%;
+        height: 15%;
+        font-size: 32px;
+    }
+    
+    .selec_pais,
+    .selec_prov {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+    
+    .text1 {
+        font-size: 16px;
+    }
+    
+    .data {
+        font-size: 16px;
+    }
+    
+    .container2 {
+        width: 80vw;
+    }
+    
+    .select {
+        width: 50%;
+    }
+    
+    .imgcontainer {
+        top: 11rem;
+        left: 13rem;   
+        transform: translate(-50%, -50%);
+        height: 8vh;
+        width: 14vw;
+        display: flexbox;
+    }
+    
+    .imgcontainer::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 92%;
+        height: 92%;
+        background-color: rgba(200, 214, 5, 0.164);
+        border-radius: 2rem;
+        box-shadow: inset 0 0 10px rgba(251, 255, 0, 0.219);
+        animation: expand-color 6s linear infinite;
+        z-index: -1;
+    }
+    
+    @keyframes expand-color {
+        0% {
+            transform: scale(1.5);
+        }
+        50% {
+            transform: scale(0.5);
+        }
+        100% {
+            transform: scale(1.5);
+        }
+    }
+    
+    .data_weather {
+        height: 50vh;
+    }
+    
+    .loader {
+        margin-top: 2rem;
+        width: 80px;
+        height: 20px;
+    }
+    
+    .snow {
+        margin-top: 2rem;
+    }
+}
