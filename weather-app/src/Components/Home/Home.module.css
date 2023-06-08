@@ -141,7 +141,7 @@
 
 .data_weather {
     border: 1px solid black;
-    background-color: #216ee28f;
+    background-color: #21c5e2bb;
     height: 52vh;
     transform-style: preserve-3d;
     animation: rot 2s infinite ease;
