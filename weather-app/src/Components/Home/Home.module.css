@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to bottom, rgba(58, 56, 158, 0.84), #0e0c8b);
+    background: linear-gradient(to bottom, rgb(0, 0, 0), #302f2f);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -14,11 +14,11 @@
 }
 
 .title {
-    width: 28%;
+    width: 24%;
     height: 20%;
     font-size: 48px;
     font-family: cursive;
-    color: #1f1f1f;
+    color: #10038b;
     border-radius: 2rem;
     background-image: url('../../../public/nube.jpg');
     background-size: cover;
@@ -33,18 +33,18 @@
     padding: 0.2rem;
     font-size: 20px;
     font-family: cursive;
-    color: #0e0000;
+    color: #d3cccc;
 }
 
 .text {
     width: 92%;
     height: 12%;
-    font-size: 21px;
+    font-size: 20px;
     font-family:'Courier New', Courier, monospace;
     display: flex;
     text-align: center;
     justify-content: center;
-    color: #0e0000;
+    color: #131212;
     background-color: #0414fa4f;
     border-radius: 0.5rem;
     margin-left: 0.6rem;
@@ -55,7 +55,7 @@
     height: 10%;
     font-size: 18px;
     font-family:'Courier New', Courier, monospace;
-    color: #0e0000;
+    color: #1f1e1e;
     background-color: #f8e8e85e;
     border: 0.1px solid rgba(0, 0, 0, 0.555) ;
 }
@@ -63,7 +63,7 @@
 .data {
     font-size: 18px;
     font-family:'Courier New', Courier, monospace;
-    color: #0e0000;   
+    color: #f3f1f1;   
     display:flex; 
     margin-left: 0.6rem;
 }
