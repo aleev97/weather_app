@@ -106,9 +106,7 @@ export default function Home() {
           {weather && (
             <div className={styles.data_weather}>
               <h2 className={styles.text}>Pronóstico para hoy:</h2>
-              <h2 className={styles.text1}>
-                Temperatura actual: {weather.main.temp}°
-              </h2>
+              <h2 className={styles.text1}>Actual : {weather.main.temp}°C</h2>
               <p className={styles.data}>Mínima: {weather.main.temp_min}°</p>
               <p className={styles.data}>Máxima: {weather.main.temp_max}°</p>
               <p className={styles.data}>Humedad: {weather.main.humidity}% 💧</p>
