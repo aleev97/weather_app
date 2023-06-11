@@ -278,7 +278,7 @@
     .data {
         font-size: 14px;
         margin: 0.5rem;
-        width: 150px;
+        width: 160px;
     }
 
     .container2 {
@@ -294,7 +294,7 @@
         width: 100px;
         height: 90px;
         margin-left: -15px;
-        margin-top: -14px;
+        margin-top: -12px;
         opacity: 1;
         transition: opacity 0.5s ease;
     }
