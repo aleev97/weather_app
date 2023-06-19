@@ -8,6 +8,7 @@ export const getCityWeather = async (city) => {
       q: city,
       appid: "4488adc2e2b506afd28d2f52c9a51691",
       units: "metric",
+      lang: "sp",
     },
   };
 

@@ -5,10 +5,18 @@ import { getCities } from "../../services/cities";
 import { getCityWeather } from "../../services/weather";
 
 export default function Home() {
+  //constantes para uso de estados
   const [countries, setCountries] = useState([]);
   const [cities, setCities] = useState([]);
   const [weather, setWeather] = useState(null);
   const [isLoadingWeather, setIsLoadingWeather] = useState(false);
+
+  //fecha actual
+  var today = new Date();
+  var day = today.getDate();
+  var month = today.getMonth() + 1;
+  var year = today.getFullYear();
+  var date = day + "/" + month + "/" + year;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -105,19 +113,20 @@ export default function Home() {
         <div className={styles.container2}>
           {weather && (
             <div className={styles.data_weather}>
-              <h2 className={styles.text}>Pronóstico para hoy:</h2>
-              <h2 className={styles.text1}>Actual : {weather.main.temp}°C</h2>
-              <p className={styles.data}>Mínima: {weather.main.temp_min}°</p>
-              <p className={styles.data}>Máxima: {weather.main.temp_max}°</p>
+              <h2 className={styles.text}>Pronóstico para hoy: {date} </h2>
+              <h2 className={styles.text1}>Actual : {weather.main.temp.toFixed(1)}°C</h2>
+              <p className={styles.data}>Sensación térmica: {weather.main.feels_like.toFixed(1)}°C</p>
+              <p className={styles.data}>Mínima: {weather.main.temp_min.toFixed(1)}°C</p>
+              <p className={styles.data}>Máxima: {weather.main.temp_max.toFixed(1)}°C</p>
               <p className={styles.data}>Humedad: {weather.main.humidity}% 💧</p>
-              <p className={styles.data}>Viento: {weather.wind.speed} Km/h 🌫🌫</p>
+              <p className={styles.data}>Viento: {weather.wind.speed} m/s 🌫🌫</p>
               <p className={styles.data}>Nubosidad: {weather.clouds.all} % ⛅</p>
               <div className={styles.imgcontainer}>
                 <img
                   className={styles.img}
                   src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
                   alt="weather icon"
-                />
+                /> <div className={styles.icon_info} >{weather.weather[0].description}</div>
               </div>
             </div>
           )}
